@@ -1,0 +1,223 @@
+/** 基础通用 **/
+@for $i from 1 through 300 {
+  .mt#{$i} {
+    margin-top: $i * 1px;
+  }
+  .mr#{$i} {
+    margin-right: $i * 1px;
+  }
+  .mb#{$i} {
+    margin-bottom: $i * 1px;
+  }
+  .ml#{$i} {
+    margin-left: $i * 1px;
+  }
+  .pt#{$i} {
+    padding-top: $i * 1px;
+  }
+  .pl#{$i} {
+    padding-left: $i * 1px;
+  }
+  .pr#{$i} {
+    padding-right: $i * 1px;
+  }
+  .pb#{$i} {
+    padding-bottom: $i * 1px;
+  }
+  .pall#{$i} {
+    padding: $i * 1px;
+  }
+
+  .fs#{$i} {
+    font-size: $i * 1px;
+  }
+  .w#{$i} {
+    width: $i * 1px;
+  }
+  .h#{$i} {
+    height: $i * 1px;
+  }
+  .lh#{$i} {
+    line-height: $i * 1px;
+  }
+  .br#{$i} {
+    border-radius: $i * 1px;
+  }
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+// ::-webkit-scrollbar {
+//   width: 6px;
+//   height: 8px;
+//   background-color: transparent; /* or add it to the track */
+// }
+// ::-webkit-scrollbar-thumb {
+//   width: 12px;
+//   height: 12px;
+//   border-radius: 4px;
+//   background: #aaa;
+// }
+.cfff {
+  color: #fff;
+}
+
+.tr {
+  text-align: right;
+}
+.ta {
+  text-align: center;
+}
+.flex1 {
+  flex: 1;
+}
+.flex {
+  display: flex;
+}
+
+.flex-a {
+  display: flex;
+  align-items: center;
+}
+
+.flex-a-j {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spa {
+  justify-content: space-between;
+}
+.b {
+  font-weight: bold;
+}
+
+.c-main {
+  color: var(--el-color-primary);
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.text-linear {
+  width: max-content;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.re-skeleton__item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+  background-size: 400% 100%;
+  border-radius: 8px;
+
+  &.animate {
+    animation: re-skeleton-loading 1.4s ease infinite;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #dcdde0;
+    width: 30%;
+    height: 30%;
+  }
+}
+
+@keyframes re-skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  to {
+    background-position: 0 50%;
+  }
+}
+// customized tooltip
+.el-popper.is-customized {
+  padding: 8px;
+  background: #000;
+  color: #fff;
+  max-width: 256px;
+  font-size: 14px;
+  font-family: 'Lexend Deca';
+  font-style: normal;
+}
+
+.el-button {
+  min-width: 120px;
+}
+
+.lcm-modal-overlay {
+  z-index: 99999;
+}
+
+@keyframes bgBreath {
+  from {
+    background-size: 100% 100%;
+  }
+  to {
+    background-size: 130% 130%;
+  }
+}
+
+@keyframes bgBreathM {
+  from {
+    background-size: auto 100%;
+  }
+  to {
+    background-size: auto 130%;
+  }
+}
+
+body {
+  .el-input {
+    .el-input__wrapper {
+      background-color: #fff;
+      .el-input__inner {
+        color: #000;
+      }
+    }
+  }
+
+  .el-input--large .el-input__wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .el-button {
+    min-width: 80px;
+  }
+}
